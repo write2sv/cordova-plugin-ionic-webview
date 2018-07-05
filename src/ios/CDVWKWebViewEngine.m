@@ -160,9 +160,6 @@
     NSString * wwwPath = [[NSBundle mainBundle] pathForResource:@"www" ofType: nil];
     [self setServerPath:wwwPath];
 
-    //allow remote connections to the webserver if set in config
-    BOOL allowRemote = [settings cordovaBoolSettingForKey:@"WKAllowRemoteConnect" defaultValue:NO];
-
     //enable suspend in background if set in config
     BOOL suspendInBackground = [settings cordovaBoolSettingForKey:@"WKSuspendInBackground" defaultValue:YES];
     int waitTime = 10;
